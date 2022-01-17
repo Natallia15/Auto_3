@@ -16,7 +16,8 @@ public class FirstTest {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com");
+        //driver.get("https://the-internet.herokuapp.com");
+        driver.get("https://www.facebook.com");
     }
 
     @Test
@@ -43,6 +44,16 @@ public class FirstTest {
         driver.findElement(By.xpath("//*[@id=\"file-submit\"]")).click();
 
     }
+    @Test
+    public void threeTest() throws InterruptedException {
+        WebElement batton = driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']"));
+        batton.click();
+        Thread.sleep(1000);
+        WebElement firstName = driver.findElement(By.xpath("//input[@name='firstname']"));
+        //firstName.sand;
+        //
+        }
+
 
 
 
